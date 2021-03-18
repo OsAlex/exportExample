@@ -15,7 +15,7 @@ class XlsExchangeByFtp extends XlsExchange implements ExchangeInterface
     protected string $ftp_password;
     protected string $ftp_dir;
 
-    private array $json;
+    protected array $data;
 
     public function __construct($ftp_host, $ftp_login, $ftp_password, $ftp_dir)
     {
@@ -31,12 +31,9 @@ class XlsExchangeByFtp extends XlsExchange implements ExchangeInterface
     public function export()
     {
         $file = fopen($this->path_to_output_xlsx_file, 'w');
-
-        foreach ($this->json as $fields) {
-            fputcsv($file, $fields);
+        foreach ($this->data as $row) {
+            fputcsv($file, $row);
         }
-
-        rewind($file);
 
         try {
             $ftp = ftp_connect($this->ftp_host, '22', '60');
@@ -45,6 +42,8 @@ class XlsExchangeByFtp extends XlsExchange implements ExchangeInterface
         } catch (Exception $exception) {
             throw new DomainException('Error FTP connect');
         }
+
+        rewind($file);
     }
 
     /**
@@ -55,7 +54,7 @@ class XlsExchangeByFtp extends XlsExchange implements ExchangeInterface
     {
         $this->path_to_input_json_file = $value;
 
-        $this->json = parent::parse($this->path_to_input_json_file);
+        $this->data = parent::parse($this->path_to_input_json_file);
 
         return $this;
     }

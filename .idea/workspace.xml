@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e17a650-8e5d-4b78-813e-172bb44a9525" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/XlsExchangeLocal.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmp/input.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmp/output.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XlsExchange.php" beforeDir="false" afterPath="$PROJECT_DIR$/XlsExchange.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XlsExchangeByFtp.php" beforeDir="false" afterPath="$PROJECT_DIR$/XlsExchangeByFtp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.xls" beforeDir="false" afterPath="$PROJECT_DIR$/output.xls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +26,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
